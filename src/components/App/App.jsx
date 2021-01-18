@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './App.css';
+import Header from '../Header/Header.jsx';
 import GalleryList from '../GalleryList/GalleryList.jsx';
+
 
 function App() {
 
@@ -15,7 +17,6 @@ function App() {
       axios.get('/gallery')
       .then((response) => {
         setPicList(response.data);
-        console.log(response.data);
       })
       .catch((err) => {
         console.log(err);
@@ -24,9 +25,7 @@ function App() {
 
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Gallery of My Life</h1>
-        </header>
+        <Header />
         <main>
           <GalleryList 
             picList = {picList}

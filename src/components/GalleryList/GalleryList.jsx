@@ -10,7 +10,7 @@ function GalleryList({picList, fetchPics}){
                 <GalleryItem
                     key={pic.id}
                     pic={pic}
-                    fetchPics={fetchPics}
+                    fetchPics = {fetchPics}
                 />
             ))}
         </div>
